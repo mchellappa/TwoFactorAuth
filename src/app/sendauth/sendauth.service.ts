@@ -15,7 +15,7 @@ import { CustomResponse } from '../models/customresponse';
 export class SendAuthService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private serviceUrl = 'http://jhsecurity.azurewebsites.net/api/Authentication';  // URL to web api
+  private serviceUrl = 'http://jhsandboxsecurity.azurewebsites.net/api/Authentication';  // URL to web api
 
   constructor(private http: Http) { }
 
