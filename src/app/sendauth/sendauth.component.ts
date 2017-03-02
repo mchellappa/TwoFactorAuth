@@ -60,6 +60,9 @@ export class SendAuthComponent implements OnInit {
         })
         .catch(CustomResponse => {
           console.log(CustomResponse);
+          this.InProcess = false;
+          this.submit = false;
+          this.invalid = true;
         });
     }else{
       this.invalid = true;

@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     setTimeout(function() {
       that.Data.SetAuthStatus("1");
       that.router.navigate(['/sendauth']);
-    }, (5000));}else{
+    }, (2000));}else{
       this.invalid = true;
     }
   }

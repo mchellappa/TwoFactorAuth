@@ -18,6 +18,7 @@
 footer {
   background-color: #002D5B !important;
   color: #fff !important;
+  min-height: 40px;
 }
 
 .section--center{
