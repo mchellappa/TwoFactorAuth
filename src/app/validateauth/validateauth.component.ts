@@ -54,7 +54,13 @@ export class ValidateAuthComponent implements OnInit {
           }
         })
         .catch(res => {
-          console.log(res);
+          this.submit =false;
+          this.InProcess = false;
+          this.invalid = true;
+          var that = this;
+          /*setTimeout(function(){
+            that.invalid = false;
+          },5000);*/
         });
     }else{
       this.invalid = true;
