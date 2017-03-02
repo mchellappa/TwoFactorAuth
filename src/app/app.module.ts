@@ -37,6 +37,7 @@ import {SmsService} from './sms/sms.service';
     ValidateAuthComponent,
     DashboardComponent,
     SmsComponent,
+    PhonePipe,
     MDL,
     PhoneMask
   ],
