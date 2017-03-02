@@ -1,0 +1,31 @@
+<section class="section--center mdl-grid mdl-grid--no-spacing">
+  <div class="demo-card-wide mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Sign in</h2>
+    </div>
+    <div id="p2" class="mdl-progress mdl-js-progress" [class.mdl-progress__indeterminate]="InProcess"></div>
+    <div class="mdl-card__supporting-text">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" [class.is-invalid]="invalid">
+        <input class="mdl-textfield__input" type="text" id="sample3" #UserName [disabled]="submit" >
+        <label class="mdl-textfield__label" for="sample3">Username</label>
+         <span class="mdl-textfield__error">Please Enter Valid Username</span>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" [class.is-invalid]="invalid">
+        <input class="mdl-textfield__input" type="password" id="sample3" #Password [disabled]="submit">
+        <label class="mdl-textfield__label" for="sample3">Password</label>
+         <span class="mdl-textfield__error">Please Enter Valid Password</span>
+      </div>
+      <br>
+      <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+  <input type="checkbox" id="switch-2" class="mdl-switch__input" #Remember [disabled]="submit">
+  <span class="mdl-switch__label">Keep Me Signed In</span>
+</label>
+    </div>
+    <div class="mdl-card__actions  mdl-card--border">
+      <button class="mdl-button" (click)="LoginUser(UserName.value, Password.value , Remember.value);" [disabled]="submit">Login</button>
+    </div>
+
+  </div>
+
+</section>

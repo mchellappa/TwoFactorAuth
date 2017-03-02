@@ -1,0 +1,23 @@
+.section--center {
+  max-width: 400px;
+  margin-top: 80px;
+  margin-bottom: 100px !important;
+}
+
+.demo-card-wide>.mdl-card__title {
+  color: #fff;
+  height: 65px;
+  background: #002D5B;
+}
+
+.demo-card-wide>.mdl-card__menu {
+  color: #fff;
+}
+
+h6{
+  margin-top:5px !important; 
+}
+
+.demo-card-wide {
+  border-radius: 2px;
+}

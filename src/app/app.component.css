@@ -1,0 +1,25 @@
+.demo-layout-transparent {
+  background: url('../assets/corporate-guys.jpg') center / cover;
+}
+
+.mdl-layout__content {
+  height: 100%;
+  
+}
+
+.mdl-layout__content > .contain{
+  padding: 0 10px;
+}
+
+.mdl-progress {
+  width: 100% !important;
+}
+
+footer {
+  background-color: #002D5B !important;
+  color: #fff !important;
+}
+
+.section--center{
+  margin-bottom: 90px !important;
+}

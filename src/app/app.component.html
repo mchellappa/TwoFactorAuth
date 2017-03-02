@@ -1,3 +1,40 @@
-<h1>
-  {{title}}
-</h1>
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header  mdl-layout__header--transparent mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title"></span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <img src="/assets/jhblue.png" width="250" style="margin-top:50px;">
+    </div>
+  </header>
+  <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="contain">
+    <router-outlet></router-outlet>
+    </div>
+  </main>
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">
+        <img src="/assets/jh-signature-white.png" width="140">
+      </div>
+      <ul class="mdl-mini-footer__link-list">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy and Terms</a></li>
+        <li><a href="#">User Agreement</a></li>
+      </ul>
+    </div>
+    <div class="mdl-mini-footer__right-section">
+    </div>
+  </footer>
+</div>
