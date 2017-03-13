@@ -35,6 +35,20 @@ export class NotificationsComponent implements OnInit {
     private router: Router, private Data: AppDataService) { }
 
   ngOnInit(): void {
+    if (!this.Data.step1auth) {
+      this.router.navigate(['/login']);
+      return;
+    };
+
+    if (!this.Data.step2auth) {
+      if (!this.Data.codeSent) {
+        this.router.navigate(['/sendauth']);
+        return;
+      } else {
+        this.router.navigate(['/validateauth']);
+        return;
+      }
+    }
   }
 
   SendNotification(mobile: string, msg: string): void {

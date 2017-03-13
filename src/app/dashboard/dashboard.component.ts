@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
     private router: Router, private Data: AppDataService) { }
 
   ngOnInit(): void {
-    /*
+    
     if (!this.Data.step1auth) {
       this.router.navigate(['/login']);
       return;
@@ -43,6 +43,6 @@ export class DashboardComponent implements OnInit {
       }
     }
 
-    this.username = this.Data.username;*/
+    this.username = this.Data.username;
   }
 }
