@@ -1,0 +1,59 @@
+<section mdl class="section--center mdl-grid mdl-grid--no-spacing">
+  <div class="demo-card-wide mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp" [class.animate]="invalidNotify || invalidDelivery">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Notifications</h2>
+    </div>
+    <div id="p2" class="mdl-progress mdl-js-progress" [class.mdl-progress__indeterminate]="InProcess"></div>
+    <div class="mdl-card__supporting-text">
+      <form action="#">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col">
+            <h5>Send SMS Notifications</h5>
+            <div class="mdl-cell mdl-cell--12-col">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" [class.is-invalid]="invalidNotify">
+                <input phone class="mdl-textfield__input" type="text" id="sample4" maxlength="14" #mobile [disabled]="submitNotify">
+                <label class="mdl-textfield__label" for="sample4">Mobile Number...</label>
+                <span class="mdl-textfield__error">Please input correct Mobile Number</span>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col">
+              <div class="mdl-textfield mdl-js-textfield" [class.is-invalid]="invalidNotify">
+                <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5" #message [disabled]="submitNotify"></textarea>
+                <label class="mdl-textfield__label" for="sample5">Message Text...</label>
+                <span class="mdl-textfield__error">Please input a valid message!</span>
+              </div>
+            </div>
+            <br/>
+            <div class="mdl-cell mdl-cell--12-col">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="SendNotification(mobile.value,message.value)"
+                [disabled]="submitNotify">Send Notification</button>
+            </div>
+            <br/>
+            <div class="mdl-cell mdl-cell--12-col innershadow" *ngIf="resNotify">
+              <pre class="prettyprint lang-xml lang-scm" [innerHTML]="theHtmlStringNotify"></pre>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--5-col mdl-cell--1-offset">
+            <h5>Check SMS Delivery</h5>
+            <div class="mdl-cell mdl-cell--12-col">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" [class.is-invalid]="invalidDelivery">
+                <input class="mdl-textfield__input" type="text" id="sample4" #txn [disabled]="getDelivery">
+                <label class="mdl-textfield__label" for="sample4">Txn Id...</label>
+                <span class="mdl-textfield__error">Please input correct Txn Id</span>
+              </div>
+            </div>
+            <br/>
+            <div class="mdl-cell mdl-cell--12-col">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="GetDelivery(txn.value)"
+                [disabled]="getDelivery">Get Delivery Status</button>
+            </div>
+            <br/>
+            <div class="mdl-cell mdl-cell--12-col innershadow" *ngIf="resDelivery">
+              <pre class="prettyprint lang-xml lang-scm" [innerHTML]="theHtmlStringDel"></pre>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -20,14 +20,14 @@ import { LoginComponent } from './login/login.component';
 import { SendAuthComponent } from './sendauth/sendauth.component';
 import { ValidateAuthComponent } from './validateauth/validateauth.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SmsComponent } from './sms/sms.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 //Application Services
 import {LoginService} from './login/login.service';
 import {SendAuthService} from './sendauth/sendauth.service';
 import {ValidateAuthService} from './validateauth/validateauth.service';
 import {DashboardService} from './dashboard/dashboard.service';
-import {SmsService} from './sms/sms.service';
+import {NotificationsService} from './notifications/notifications.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import {SmsService} from './sms/sms.service';
     SendAuthComponent,
     ValidateAuthComponent,
     DashboardComponent,
-    SmsComponent,
+    NotificationsComponent,
     PhonePipe,
     MDL,
     PhoneMask
@@ -54,7 +54,7 @@ import {SmsService} from './sms/sms.service';
     AppDataService,
     PhonePipe,
     DashboardService,
-    SmsService
+    NotificationsService
   ],
   bootstrap: [AppComponent]
 })

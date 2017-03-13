@@ -1,8 +1,9 @@
 .section--center {
   max-width: 940px;
   margin-top: 60px;
-  min-height: 400px;
   margin-bottom:20px;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 
 .demo-card-wide>.mdl-card__title {
@@ -17,15 +18,35 @@
 
 .demo-card-wide {
   border-radius: 2px;
+  margin-bottom: 10px;
 }
 
 .demo-card-square.mdl-card {
-  width: 320px;
+  width: 100%;
   height: 320px;
   margin-bottom: 20px;
 }
-.demo-card-square > .mdl-card__title {
+#sms.demo-card-square > .mdl-card__title {
   color: #fff;
   background:
-    url('../../assets/dog.png') bottom right 15% no-repeat #002D5B;
+    url('../../assets/notify.png') bottom right -35px no-repeat lightskyblue;
+    background-size: 45%;
+}
+
+#security.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../../assets/Security.png') bottom right -20px no-repeat #002D5B;
+    background-size: 55%;
+}
+
+.mdl-cell {
+  box-sizing: border-box;
+  background-color:transparent;
+  padding-left: 8px;
+  padding-top: 4px;
+  color: white;
+}
+.mdl-grid:first-of-type .mdl-cell {
+  height: 50px;
 }
