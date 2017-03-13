@@ -29,9 +29,7 @@
                 [disabled]="submitNotify">Send Notification</button>
             </div>
             <br/>
-            <div class="mdl-cell mdl-cell--12-col innershadow" *ngIf="resNotify">
-              <pre class="prettyprint lang-xml lang-scm" [innerHTML]="theHtmlStringNotify"></pre>
-            </div>
+            
           </div>
           <div class="mdl-cell mdl-cell--5-col mdl-cell--1-offset">
             <h5>Check SMS Delivery</h5>
@@ -48,7 +46,17 @@
                 [disabled]="getDelivery">Get Delivery Status</button>
             </div>
             <br/>
-            <div class="mdl-cell mdl-cell--12-col innershadow" *ngIf="resDelivery">
+           
+          </div>
+          <div class="mdl-cell mdl-cell--12-col" *ngIf="resNotify">
+            <h5>Notification Confirmation</h5>
+            <div class="innershadow" >
+              <pre class="prettyprint lang-xml lang-scm" [innerHTML]="theHtmlStringNotify"></pre>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--12-col" *ngIf="resDelivery">
+            <h5>Delivery Report</h5>
+             <div class="innershadow" >
               <pre class="prettyprint lang-xml lang-scm" [innerHTML]="theHtmlStringDel"></pre>
             </div>
           </div>
